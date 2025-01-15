@@ -11,7 +11,7 @@ async function insertMessage(messageData){
     return result.insertedId;
 }
 
-async function getMessageByRoom(roomName){
+async function getMessagesByRoom(roomName){
     const client = await connectDB();
     const db = client.db('real-time-chat');
     const messagesColl = db.collection('messages');
